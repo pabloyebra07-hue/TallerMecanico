@@ -44,7 +44,7 @@ public enum Opcion {
         return opciones.containsKey(numeroOpcion);
     }
 
-    public Opcion get(int numeroOpcion){
+    public static Opcion get(int numeroOpcion){
         if (!esValida(numeroOpcion)){
             throw new IllegalArgumentException("La opción no es valida");
         }
