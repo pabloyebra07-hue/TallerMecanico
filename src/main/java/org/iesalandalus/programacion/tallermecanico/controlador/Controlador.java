@@ -18,7 +18,7 @@ public class Controlador {
     public Controlador(ModeloCascada modeloCascada, Vista vista) {
         Objects.requireNonNull(vista,"La vista no puede ser nula");
         Objects.requireNonNull(modeloCascada,"El modelo no puede ser nulo");
-//        vista.setControlador(this);
+        vista.setControlador(this);
         this.modeloCascada = modeloCascada;
         this.vista = vista;
     }
