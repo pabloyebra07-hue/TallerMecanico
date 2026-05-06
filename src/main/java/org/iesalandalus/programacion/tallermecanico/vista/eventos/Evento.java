@@ -1,6 +1,5 @@
 package org.iesalandalus.programacion.tallermecanico.vista.eventos;
 
-import java.io.File;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -27,8 +26,11 @@ public enum Evento {
     SALIR (1,"Salir");
 
     private int codigo;
+
     private String mensaje;
+
     static Map<Integer, Evento> opciones = new HashMap<>();
+
     static {
         for (Evento evento : values()) {
             opciones.put(evento.codigo, evento);
@@ -48,7 +50,6 @@ public enum Evento {
         if (!esValida(codigo)){
             throw new IllegalArgumentException("La opción no es valida");
         }
-
         return opciones.get(codigo);
     }
 

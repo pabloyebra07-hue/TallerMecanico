@@ -1,6 +1,6 @@
 package org.iesalandalus.programacion.tallermecanico.vista;
 
-import org.iesalandalus.programacion.tallermecanico.controlador.Controlador;
+import org.iesalandalus.programacion.tallermecanico.controlador.IControlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
@@ -30,5 +30,5 @@ public interface Vista {
 
     void mostrarTrabajos(Trabajo[] trabajos);
 
-    void setControlador(Controlador controlador);
+    void setControlador(IControlador IControlador);
 }
