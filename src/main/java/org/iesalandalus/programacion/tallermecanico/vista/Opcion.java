@@ -9,12 +9,12 @@ public enum Opcion {
     BORRAR_CLIENTE (13, "Borrar cliente"),
     LISTAR_CLIENTE (14, "Listar cliente"),
     MODIFICAR_CLIENTE (15,"Modificar cliente"),
-    //-
+    //
     INSERTAR_VEHICULO (21,"Insertar vehiculo"),
     BUSCAR_VEHICULO (22, "Buscar vehiculo"),
     BORRAR_VEHICULO (23,"Borrar vehiculo"),
     LISTAR_VEHICULO (24,"Listar vehiculo"),
-    //-
+    //
     INSERTAR_REVISION (31,"Insertar revisión"),
     BUSCAR_REVISION (32,"Buscar revisión"),
     BORRAR_REVISION (33,"Borrar revisión"),

@@ -4,8 +4,12 @@ import org.iesalandalus.programacion.tallermecanico.controlador.IControlador;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Trabajo;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros.TipoTrabajo;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.Evento;
 import org.iesalandalus.programacion.tallermecanico.vista.eventos.GestorEventos;
+
+import java.time.LocalDate;
+import java.util.Map;
 
 public interface Vista {
     GestorEventos getGestorEventos();
@@ -17,6 +21,28 @@ public interface Vista {
     void ejecutar(Evento evento);
 
     void notificarResultado(Evento evento, String texto, Boolean exito);
+
+    Cliente leerCliente();
+
+    Cliente leerClienteDni();
+
+    String leerNuevoNombre();
+
+    String leerNuevoTelefono();
+
+    Vehiculo leerVehiculo();
+
+    Vehiculo leerVehiculoMatricula();
+
+    Trabajo leerRevision();
+
+    Trabajo leerMecanico();
+
+    Trabajo leerTrabajoVehiculo();
+
+    int leerHoras();
+
+    float leerPrecioMaterial();
 
     void mostrarCliente(Cliente cliente);
 
@@ -31,4 +57,12 @@ public interface Vista {
     void mostrarTrabajos(Trabajo[] trabajos);
 
     void setControlador(IControlador IControlador);
+
+    LocalDate leerMes();
+
+    LocalDate leerFechaCierre();
+
+    void mostraEstadisticasMensuales(Map<TipoTrabajo, Integer> estadisticas);
+
+
 }

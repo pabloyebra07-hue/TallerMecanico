@@ -5,10 +5,12 @@ import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepci
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.*;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.FabricaFuenteDatos;
+import org.iesalandalus.programacion.tallermecanico.modelo.negocio.ficheros.TipoTrabajo;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class ModeloCascada implements Modelo {
@@ -206,5 +208,10 @@ public class ModeloCascada implements Modelo {
         }
 
         return coleccionTrabajos;
+    }
+
+    @Override
+    public Map<TipoTrabajo, Integer> getEstadisticasMensuales(LocalDate mes) {
+        return Map.of();
     }
 }
